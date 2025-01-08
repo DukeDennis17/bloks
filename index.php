@@ -17,17 +17,4 @@ if (isset($_GET["search_query"]) &&$_GET["search_query"] != ""){
 
 $posts = $db->query($sql, $params)->fetchall();
     
-echo "<form>";
-echo "<input name='search_query' />";
-echo "<button>meklet</button>";
-echo "</form>";
-
-echo"<ul>";
-if(count($posts) == 0 ){
-    echo "nav atrasts pamegini citu";
-}
-echo"<ul>";
-foreach($posts as $post){
-    echo "<li>" . $post["content"] . "</li>";
-};
-echo "</ul>";
+require "index.view.php";
