@@ -3,5 +3,5 @@
 return [
     "/" => "controllers/index.php",
     "/about" => "controllers/story.php",
-    "/caegories" => "categories.php"
+    "/show" => "controllers/posts/show.php"
 ];
