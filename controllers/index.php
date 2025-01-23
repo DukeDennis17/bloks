@@ -12,3 +12,5 @@ if (isset($_GET["search_query"]) &&$_GET["search_query"] != ""){
 $posts = $db->query($sql, $params)->fetchall();
     $pageTitle = "Blogs";
 require "views/posts/index.view.php";
+?>
+<img src="download.jpg">;

@@ -1,5 +1,5 @@
-CREATE DATABASE blog;
-USE blog;
+CREATE DATABASE blog_ipb23;
+USE blog_ipb23;
 
 CREATE TABLE posts(
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
@@ -11,6 +11,6 @@ INSERT INTO posts
 VALUES
 ("Pirmais bloga ieraksts"),
 ("Otrais bloga ieraksts");
-("conor mcni**er");
+
 
 SELECT * FROM posts;

@@ -1,10 +1,9 @@
 <?php
 
-if (isset($_GET["id"]) && $_GET["id"] != "") {
-    $sql = "SELECT * FROM posts WHERE id = :id";
-    $params = ["id" => $_GET["id"]];
+if (isset($_POST["id"]) && $_POST["id"] != "") {
+    $sql = "INSERT INTO posts (content) VALUES (:content);";
+    $params = ["content" => $_POST["id"]];
     $post = $db->query($sql, $params)->fetch();
-    dd($post);
+   
 }
-
 require "views/posts/show.view.php";

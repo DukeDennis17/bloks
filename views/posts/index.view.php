@@ -2,20 +2,18 @@
 <?php require "views/components/navbar.php"; ?>
 
 <?php if(count($posts) == 0 ){ ?>
-    <p>nav atrasts pamegini citu</p>;
+    <p>Nav atrasti rezultāti, mēģiniet citu.</p>
 <?php } ?>
+
 <ul>
 <?php foreach($posts as $post){ ?>
-     <li><a herf="show?id=<?=  $post["id"] ?>"> <?= $post["content"] ?></a> </li>
+    <li><a href="show?id=<?= $post["id"] ?>"> <?= htmlspecialchars($post["content"]) ?></a></li>
 <?php } ?>
-<form>
- <input name='search_query' value='<?= $_GET["search_query"] ?? "" ?> ' />
- <button>meklet</button>
- </form>
- </ul> 
-   <?php require "views/components/footer.php";
+</ul>
 
+<form method="GET" action="">
+    <input name='search_query' value='<?= htmlspecialchars($_GET["search_query"] ?? "") ?>' />
+    <button type="submit">Meklēt</button>
+</form>
 
- 
-
-
+<?php require "views/components/footer.php"; ?>
